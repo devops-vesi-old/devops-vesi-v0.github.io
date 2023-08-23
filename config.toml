@@ -1,0 +1,36 @@
+baseURL = 'DevTeam'
+languageCode = 'en-us'
+title = 'DevTeam'
+theme = 'SimpleIntro'
+
+[menus]
+    [[menu.main]]
+        identifier = "test"
+        name = "About us"
+        weight = "10"
+        url = "#about"
+    [[menu.main]]
+        identifier = "landscape"
+        name = "Landscape"
+        weight = "20"
+        url = "#landscape"
+    [[menu.main]]
+        identifier = "team"
+        name = "Team"
+        weight = "30"
+        url = "#team"
+    [[menu.main]]
+        identifier = "career"
+        name = "Career"
+        weight = "40"
+        url = "https://www.jobteaser.com/fr/companies/vinci-energies-si/job-offers"
+
+[params]
+    maintext = "Think it, Build it !"
+    name = "DevTeam"
+    urlFooterImg = "/img/logodev.png"
+    Adress = "8 avenue du Stade de France, 93200 Saint-Denis"
+    Company = "Vinci Energies Systèmes d'Information"
+
+    mailAdress = "exemple@gmail.com"
+    defaultContentLanguage = 'en'

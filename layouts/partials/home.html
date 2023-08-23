@@ -1,0 +1,279 @@
+
+<div>
+    <div
+      id="mainBG"
+      style="background-color: #1f293a;">
+      <div class="centerAll">
+        <div>
+         <img src="/img/logodev.png"/>
+        </div>
+
+        <div class="text text-xl text-center">
+
+          {{if $.Site.Params.maintext}}{{ $.Site.Params.maintext }}{{else}}Edit config.toml/params{{end}}
+        </div>
+      </div>
+    </div>
+    {{ $data := .Site.Data.home }}
+    <main class="container mx-auto mt-8 px-4 xl:px-0">
+      <section id="about" class="mt-12" style="scroll-margin-block-start: 140px">
+        <div class="md:flex justify-center">
+          {{ partial "home_title" (dict "title" "About Us") }}
+        </div>
+        <br />
+        <div class="mt-4 md:mt-0 md:ml-4 justify-center text-center">
+          <div class="text-2xl font-bold">
+              {{ if $data.about.title }}{{$data.about.title}}{{else}}You can put
+              text in data/home/about.toml/title{{end}}
+          </div>
+          <div class="text-lg mt-3">
+            <div>
+              {{ if $data.about.text}}{{ replace $data.about.text "\n" "<br />" | safeHTML }}
+              {{else}}You can put text in
+              data/home/about.toml/text{{end}}
+            </div>
+          </div>
+          <br />
+          <div class="text-2xl font-bold">
+            {{ if $data.about.title1 }}{{$data.about.title1}}{{else}}You can put
+            text in data/home/about.toml/title{{end}}
+          </div>
+          <div class="text-lg mt-3">
+            <div>
+              {{ if $data.about.text1}}{{ replace $data.about.text1 "\n" "<br />" | safeHTML }}
+              {{else}}You can put text in
+              data/home/about.toml/text1{{end}}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="landscape" class="mt-12" style="scroll-margin-block-start: 140px">
+        <div class="md:flex justify-center">
+          {{ partial "home_title" (dict "title" "Landscape in numbers") }}
+        </div>
+          {{if $data.landscape.numbers}}
+          <div
+           class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center"
+          >
+          {{ range $data.landscape.numbers }}
+          <div class="overflow-hidden">
+            <div class="">
+              <div class="font-bold text-xl mb-2 py-3 px-8 ml-6">
+                <div class="">
+                  <img
+                    src="{{ .icon }}"
+                    width="40%"
+                    class="flex mx-auto my-auto"
+                  />
+                  <div class="flex mx-auto my-auto" style="margin-left: 45%"> 
+                    {{ .name }}
+                  </div>
+                </div>
+              </div>
+              <p class="flex mx-auto my-auto" style="margin-left: 45%">
+                {{ replace .text "\n" "<br />" | safeHTML }}
+              </p>
+            </div>
+          </div>
+          {{end}}
+        </div>
+          {{end}}
+        <br />
+        <br />
+        <div class="md:flex justify-center">
+          {{ partial "home_title" (dict "title" "SAP Landscape") }}
+        </div>
+        <br/>
+        <p class="text-center">You can find here a small list of the SAP tools we use in our daily work.</p>
+        <br/>
+        <input id="tab1" type="radio" name="tabs" checked>
+        <label for="tab1" style="font-size: 70%;">Front-end</label>
+          
+        <input id="tab2" type="radio" name="tabs">
+        <label for="tab2" style="font-size: 70%;">Back-end</label>
+        <br />
+        <section id="front" class="tab" style="scroll-margin-block-start: 140px">
+          {{if $data.landscape.front}}
+          <div
+          class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center"
+         >
+         {{ range $data.landscape.front }}
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img
+                   src="{{ .icon }}"
+                   width="50%"
+                   class="flex mx-auto my-auto"
+                 />
+               </div>
+             </div>
+           </div>
+         </div>
+            {{end}}
+          {{end}}
+        </section>
+        <section id="back" class="tab" style="scroll-margin-block-start: 140px">
+          {{if $data.landscape.back}}
+          <div
+          class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center"
+         >
+         {{ range $data.landscape.back }}
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img
+                   src="{{ .icon }}"
+                   width="50%"
+                   class="flex mx-auto my-auto"
+                 />
+               </div>
+             </div>
+           </div>
+         </div>
+            {{end}}
+          {{end}}
+        </section>
+      </section>
+
+      <!-- <section id="team" class="team-members" style="scroll-margin-block-start: 140px">
+        <div class="md:flex justify-center">
+          {{ partial "home_title" (dict "title" "Meet us") }}
+        </div>
+        <br />
+        <p class="text-center">Meet some members of our development team</p>
+        <br />
+          <div class="members">
+            <div class="sliders">
+              {{ range $data.team.members }}
+              <div class="slide">
+                <img src="{{ .icon }}" />
+              </div>
+              {{end}}
+            </div>
+          </div>
+      </section> -->
+
+      <section id="team" class="mt-12"  style="scroll-margin-block-start: 140px">
+        <div class="md:flex justify-center">
+          {{ partial "home_title" (dict "title" "Team Activities") }}
+        </div>
+        <br />
+        <p class="text-center">As a large team, we have many diverse activities</p>
+        <br />
+        {{if $data.team.activities}}
+        <div
+          class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4"
+        >
+          {{ range $data.team.activities }}
+          <div class="w-full rounded overflow-hidden shadow-lg">
+
+              <img
+              src="{{ .image }}"
+              width="80px"
+              style="margin-top: 10px; margin-left: 20px;"
+              />            
+            </a>         
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">{{ .title }}</div>
+              <p class="text-gray-700 text-base">
+                {{ .text }}
+              </p>
+            </div>
+          </div>
+          {{end}}
+        </div>
+        {{else}}
+            <div class="mt-4 text-xl text-center">Projects does not exist</div>
+        {{end}}
+      </section>
+
+      <section id="team" class="mt-12" style="scroll-margin-block-start: 140px">
+        <div class="md:flex justify-center">
+          {{ partial "home_title" (dict "title" "Team Values") }}
+        </div>
+        <br />
+        <div class="value">
+          <s id="s1" style="scroll-margin-block-start: 140px"></s> 
+          <s id="s2" style="scroll-margin-block-start: 140px"></s>
+        
+          <div class="slider">
+            <div style="background-color: #1f293a;">
+              <div class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
+                {{ range $data.team.values }}
+                  <div class="w-full rounded overflow-hidden shadow-lg">
+                    <img
+                      class=" mx-auto my-auto"
+                      src="{{ .image }}"
+                      width="134px"
+                    />               
+                    <div class="px-6 py-4">
+                      <p class="text-white text-base">
+                        {{ .text }}
+                      </p>
+                    </div>
+                  </div>
+                {{end}}
+              </div>
+            </div>
+            <div style="background-color: #1f293a;">
+              <div class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
+                {{ range $data.team.values1 }}
+                  <div class="w-full rounded overflow-hidden shadow-lg">
+                    <img
+                      class=" py-1 px-3 mx-auto my-auto"
+                      src="{{ .image }}"
+                      width="150px"
+                    />                
+                    <div class="px-6 py-4">
+                      <p class="text-white text-base">
+                        {{ .text }}
+                      </p>
+                    </div>
+                  </div>
+                {{end}}
+              </div>
+            </div>
+          </div>
+          
+          <div class="prevNext">
+            <div><a href="#s2" class="arrow-left"></a><a href="#s1" class="arrow-right"></a><a href="#s1" class="arrow-left"></a><a href="#s2" class="arrow-right"></a></div>
+            <div><a href="#s1" class="arrow-left"></a><a href="#s2" class="arrow-right"></a><a href="#s2" class="arrow-left"></a><a href="#s1" class="arrow-right"></a></div>
+          </div>
+        
+        </div>
+      </section>
+    
+      <section id="team" class="mt-12 mb-5" style="scroll-margin-block-start: 140px">
+        <div class="md:flex justify-center">
+          {{ partial "home_title" (dict "title" "Certifications Part") }}
+        </div>
+        <br />
+        {{if $data.team.certification}}
+        <div
+        class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4"
+      >
+        {{ range $data.team.certification }}
+        <div class="w-full rounded overflow-hidden shadow-lg">
+            <img
+            class=" py-1 px-3"
+            src="{{ .image }}"
+            width="130px"
+            style="margin-top: 10px; margin-left: 5px;"
+            />                 
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">{{ .title }}</div>
+            <p class="text-gray-700 text-base">
+              {{ .text }}
+            </p>
+          </div>
+        </div>
+        {{end}}
+      </div>
+          {{end}}
+      </section>
+    </main>
+  </div>
+  
