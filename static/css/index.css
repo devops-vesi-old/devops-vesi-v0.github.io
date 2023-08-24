@@ -221,7 +221,7 @@ input:checked + label {
 #s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
 
 #s1:target ~ .slider {transform: translateX(0%); -webkit-transform: translateX(0%);}
-#s2:target ~ .slider {transform: translateX(100%); -webkit-transform: translateX(-100%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
 
 .value {
 	color: black;	

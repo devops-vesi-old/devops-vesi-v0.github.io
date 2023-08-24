@@ -49,71 +49,260 @@
       </section>
       <section id="landscape" class="mt-12" style="scroll-margin-block-start: 140px">
         <div class="md:flex justify-center">
-          {{ partial "home_title" (dict "title" "Landscape in numbers") }}
+          <div class="text-3xl title-deco tracking-wide">
+            Landscape in numbers
+          </div>
+
         </div>
-          {{if $data.landscape.numbers}}
-          <div
-           class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center"
-          >
-          {{ range $data.landscape.numbers }}
+          
+          <div class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
+          
           <div class="overflow-hidden">
             <div class="">
               <div class="font-bold text-xl mb-2 py-3 px-8 ml-6">
                 <div class="">
-                  <img
-                    src="{{ .icon }}"
-                    width="40%"
-                    class="flex mx-auto my-auto"
-                  />
-                  <div class="flex mx-auto my-auto" style="margin-left: 45%"> 
-                    {{ .name }}
+                  <img src="/img/landscape/numbers/user.png" width="40%" class="flex mx-auto my-auto">
+                  <div class="flex mx-auto my-auto" style="margin-left: 40%"> 
+                    44K+
                   </div>
                 </div>
               </div>
-              <p class="flex mx-auto my-auto" style="margin-left: 45%">
-                {{ replace .text "\n" "<br />" | safeHTML }}
+              <p class="flex mx-auto my-auto" style="margin-left: 47%">
+                 Users
               </p>
             </div>
           </div>
-          {{end}}
+          
+          <div class="overflow-hidden">
+            <div class="">
+              <div class="font-bold text-xl mb-2 py-3 px-8 ml-6">
+                <div class="">
+                  <img src="/img/landscape/numbers/countries.png" width="40%" class="flex mx-auto my-auto">
+                  <div class="flex mx-auto my-auto" style="margin-left: 45%"> 
+                    21
+                  </div>
+                </div>
+              </div>
+              <p class="flex mx-auto my-auto" style="margin-left: 43%">
+                Countries
+              </p>
+            </div>
+          </div>
+          
+          <div class="overflow-hidden">
+            <div class="">
+              <div class="font-bold text-xl mb-2 py-3 px-8 ml-6">
+                <div class="">
+                  <img src="/img/landscape/numbers/apps.png" width="40%" class="flex mx-auto my-auto">
+                  <div class="flex mx-auto my-auto" style="margin-left: 42%"> 
+                    131
+                  </div>
+                </div>
+              </div>
+              <p class="flex mx-auto my-auto" style="margin-left: 40%">
+                Active apps
+              </p>
+            </div>
+          </div>
+          
+          <div class="overflow-hidden">
+            <div class="">
+              <div class="font-bold text-xl mb-2 py-3 px-8 ml-6">
+                <div class="">
+                  <img src="/img/landscape/numbers/sapVersion.png" width="40%" class="flex mx-auto my-auto">
+                  <div class="flex mx-auto my-auto" style="margin-left: 38%"> 
+                    1.108
+                  </div>
+                </div>
+              </div>
+              <p class="flex mx-auto my-auto" style="margin-left: 36%">
+                SAPUI5 Version
+              </p>
+            </div>
+          </div>
+          
         </div>
-          {{end}}
-        <br />
-        <br />
+          
+        <br>
+        <br>
         <div class="md:flex justify-center">
-          {{ partial "home_title" (dict "title" "SAP Landscape") }}
+          <div class="text-3xl title-deco tracking-wide">
+  SAP Landscape
+</div>
+
         </div>
-        <br/>
+        <br>
         <p class="text-center">You can find here a small list of the SAP tools we use in our daily work.</p>
-        <br/>
-        <input id="tab1" type="radio" name="tabs" checked>
-        <label for="tab1" style="font-size: 70%;">Front-end</label>
+        <br>
+        <input id="tab1" type="radio" name="tabs" checked="">
+        <label for="tab1" style="font-size: 100%;">Front-end</label>
           
         <input id="tab2" type="radio" name="tabs">
-        <label for="tab2" style="font-size: 70%;">Back-end</label>
-        <br />
+        <label for="tab2" style="font-size: 100%;">Back-end</label>
+        <br>
         <section id="front" class="tab" style="scroll-margin-block-start: 140px">
-          {{if $data.landscape.front}}
-          <div
-          class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center"
-         >
-         {{ range $data.landscape.front }}
+          
+          <div class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center">
+         
          <div class="overflow-hidden">
            <div class="">
              <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
                <div class="flex">
-                 <img
-                   src="{{ .icon }}"
-                   width="50%"
-                   class="flex mx-auto my-auto"
-                 />
+                 <img src="/img/landscape/Sap/front/SAPUI5.png" width="50%" class="flex mx-auto my-auto">
                </div>
              </div>
            </div>
          </div>
-            {{end}}
-          {{end}}
-        </section>
+            
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/front/sonar.png" width="50%" class="flex mx-auto my-auto">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/front/gitlab.png" width="50%" class="flex mx-auto my-auto">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/front/fiori.png" width="75%" class="flex mx-auto my-auto" style="margin-top: 15%">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/front/webIde.png" width="50%" class="flex mx-auto my-auto">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/front/cloud.png" width="50%" class="flex mx-auto my-auto" style="margin-top: 10%">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/front/btp.png" width="50%" class="flex mx-auto my-auto" style="margin-top: 10%">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/front/C4.webp" width="50%" class="flex mx-auto my-auto">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/front/analytics.png" width="50%" class="flex mx-auto my-auto">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+          
+        </div></section>
+        <section id="back" class="tab" style="scroll-margin-block-start: 140px">
+          
+          <div class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center">
+         
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/back/abap.png" width="50%" class="flex mx-auto my-auto">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/back/odata.jpg" width="50%" class="flex mx-auto my-auto">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/back/abode.png" width="45%" class="flex mx-auto my-auto" style="margin-top: -15%">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/back/business.png" width="50%" class="flex mx-auto my-auto">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/back/s4.png" width="50%" class="flex mx-auto my-auto" style="margin-top: 10%">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+         <div class="overflow-hidden">
+           <div class="">
+             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
+               <div class="flex">
+                 <img src="/img/landscape/Sap/back/mule.png" width="50%" class="flex mx-auto my-auto">
+               </div>
+             </div>
+           </div>
+         </div>
+            
+          
+        </div></section>
+      </section>
         <section id="back" class="tab" style="scroll-margin-block-start: 140px">
           {{if $data.landscape.back}}
           <div
@@ -196,8 +385,8 @@
         </div>
         <br />
         <div class="value">
-          <s id="s1" style="scroll-margin-block-start: 140px"></s> 
-          <s id="s2" style="scroll-margin-block-start: 140px"></s>
+          <s id="s1" style="display: none;"></s>
+          <s id="s2" style="display: none;"></s>
         
           <div class="slider">
             <div style="background-color: #1f293a;">
