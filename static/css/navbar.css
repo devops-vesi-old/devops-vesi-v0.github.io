@@ -13,7 +13,7 @@
   }
 
   #topnav_menu {
-    color: #099;
+    color: #10ccc6;
     white-space: normal;
     flex-direction: row;
   }
@@ -90,7 +90,7 @@
   
 	#topnav_responsive_menu a {
 	  white-space: nowrap;
-	  color: #099;
+	  color: #10ccc6;
 	  text-decoration: none;
 	}
   
@@ -124,7 +124,7 @@
 	  width: 100%;
 	  margin-bottom: 5px;
   
-	  background: #ededed;
+	  background: #10ccc6;
 	  border-radius: 3px;
   
 	  z-index: 100;
@@ -169,7 +169,7 @@
   
 	/* change color when opening the menu */
 	#topnav_hamburger_icon.open span {
-	  background: #333;
+	  background: #10ccc6;
 	}
   
 	/* the first span rotates 45° \ */

@@ -1,11 +1,11 @@
 
-<div>
+<div class="overflow-hidden">
     <div
       id="mainBG"
       style="background-color: #1f293a;">
-      <div class="centerAll">
+      <div class="centerAll main-image">
         <div>
-         <img src="/img/logodev.png"/>
+         <img src="/img/logodev.png" width="100%"/>
         </div>
 
         <div class="text text-xl text-center">
@@ -16,7 +16,7 @@
     </div>
     {{ $data := .Site.Data.home }}
     <main class="container mx-auto mt-8 px-4 xl:px-0">
-      <section id="about" class="mt-12" style="scroll-margin-block-start: 140px">
+      <section id="about" style="margin-top: 3rem; scroll-margin-block-start: 120px">
         <div class="md:flex justify-center">
           {{ partial "home_title" (dict "title" "About Us") }}
         </div>
@@ -47,7 +47,7 @@
           </div>
         </div>
       </section>
-      <section id="landscape" class="mt-12" style="scroll-margin-block-start: 140px">
+      <section id="landscape" style="margin-top: 4rem; scroll-margin-block-start: 120px">
         <div class="md:flex justify-center">
           <div class="text-3xl title-deco tracking-wide">
             Landscape in numbers
@@ -55,77 +55,75 @@
 
         </div>
           
-          <div class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
+          <div class="mt-10 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
           
           <div class="overflow-hidden">
-            <div class="">
-              <div class="font-bold text-xl mb-2 py-3 px-8 ml-6">
-                <div class="">
-                  <img src="/img/landscape/numbers/user.png" width="40%" class="flex mx-auto my-auto">
-                  <div class="flex mx-auto my-auto" style="margin-left: 40%"> 
+            <div>
+              <div class="font-bold text-xl mx-auto my-auto">
+                <div>
+                  <img src="/img/landscape/numbers/user.png" width="20%" class="flex mx-auto my-auto">
+                  <div class="text-center">
                     44K+
                   </div>
                 </div>
               </div>
-              <p class="flex mx-auto my-auto" style="margin-left: 47%">
+              <p class="text-center">
                  Users
               </p>
             </div>
           </div>
           
           <div class="overflow-hidden">
-            <div class="">
-              <div class="font-bold text-xl mb-2 py-3 px-8 ml-6">
-                <div class="">
-                  <img src="/img/landscape/numbers/countries.png" width="40%" class="flex mx-auto my-auto">
-                  <div class="flex mx-auto my-auto" style="margin-left: 45%"> 
+            <div>
+              <div class="font-bold text-xl mx-auto my-auto">
+                <div>
+                  <img src="/img/landscape/numbers/countries.png" width="20%" class="flex mx-auto my-auto">
+                  <div class="text-center"> 
                     21
                   </div>
                 </div>
               </div>
-              <p class="flex mx-auto my-auto" style="margin-left: 43%">
+              <p class="text-center">
                 Countries
               </p>
             </div>
           </div>
           
           <div class="overflow-hidden">
-            <div class="">
-              <div class="font-bold text-xl mb-2 py-3 px-8 ml-6">
-                <div class="">
-                  <img src="/img/landscape/numbers/apps.png" width="40%" class="flex mx-auto my-auto">
-                  <div class="flex mx-auto my-auto" style="margin-left: 42%"> 
+            <div class="numbers-icons">
+              <div class="font-bold text-xl mx-auto my-auto">
+                <div>
+                  <img src="/img/landscape/numbers/apps.png" width="20%" class="flex mx-auto my-auto">
+                  <div class="text-center">
                     131
                   </div>
                 </div>
               </div>
-              <p class="flex mx-auto my-auto" style="margin-left: 40%">
+              <p class="text-center">
                 Active apps
               </p>
             </div>
           </div>
           
           <div class="overflow-hidden">
-            <div class="">
-              <div class="font-bold text-xl mb-2 py-3 px-8 ml-6">
-                <div class="">
-                  <img src="/img/landscape/numbers/sapVersion.png" width="40%" class="flex mx-auto my-auto">
-                  <div class="flex mx-auto my-auto" style="margin-left: 38%"> 
+            <div class="numbers-icons">
+              <div class="font-bold text-xl mx-auto my-auto">
+                <div>
+                  <img src="/img/landscape/numbers/sapVersion.png" width="20%" class="flex mx-auto my-auto">
+                  <div class="text-center"> 
                     1.108
                   </div>
                 </div>
               </div>
-              <p class="flex mx-auto my-auto" style="margin-left: 36%">
+              <p class="text-center">
                 SAPUI5 Version
               </p>
             </div>
           </div>
           
         </div>
-          
-        <br>
-        <br>
-        <div class="md:flex justify-center">
+
+        <div class="md:flex justify-center" style="margin-top: 4rem; scroll-margin-block-start: 120px">
           <div class="text-3xl title-deco tracking-wide">
   SAP Landscape
 </div>
@@ -140,194 +138,78 @@
         <input id="tab2" type="radio" name="tabs">
         <label for="tab2" style="font-size: 100%;">Back-end</label>
         <br>
-        <section id="front" class="tab" style="scroll-margin-block-start: 140px">
+        <section id="front" class="tab" style="scroll-margin-block-start: 120px">
           
           <div class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center">
          
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/front/SAPUI5.png" width="50%" class="flex mx-auto my-auto">
-               </div>
-             </div>
-           </div>
+         <div>
+            <a href="https://sapui5.hana.ondemand.com/#/topic" target="_blank"><img src="/img/landscape/Sap/front/SAPUI5.png" width="50%" class="flex mx-auto my-auto technos" style="margin-top: -2%"></a>
          </div>
             
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/front/sonar.png" width="50%" class="flex mx-auto my-auto">
-               </div>
-             </div>
-           </div>
+         <div>
+            <a href="https://docs.sonarsource.com/sonarqube/latest/" target="_blank"><img src="/img/landscape/Sap/front/sonar.png" width="50%" class="flex mx-auto my-auto technos"></a>
          </div>
             
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/front/gitlab.png" width="50%" class="flex mx-auto my-auto">
-               </div>
-             </div>
-           </div>
+         <div>
+          <a href="https://docs.gitlab.com/" target="_blank"><img src="/img/landscape/Sap/front/gitlab.png" width="50%" class="flex mx-auto my-auto technos"></a>
          </div>
             
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/front/fiori.png" width="75%" class="flex mx-auto my-auto" style="margin-top: 15%">
-               </div>
-             </div>
-           </div>
+         <div>
+            <img src="/img/landscape/Sap/front/fiori.png" width="45%" class="flex mx-auto my-auto technos" style="margin-top: 11%">
          </div>
             
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/front/webIde.png" width="50%" class="flex mx-auto my-auto">
-               </div>
-             </div>
-           </div>
+         <div>
+            <img src="/img/landscape/Sap/front/bas.png" width="38%" class="flex mx-auto my-auto technos" style="margin-top: 15%;">
          </div>
             
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/front/cloud.png" width="50%" class="flex mx-auto my-auto" style="margin-top: 10%">
-               </div>
-             </div>
-           </div>
+         <div>
+            <img src="/img/landscape/Sap/front/devops.png" width="50%" class="flex mx-auto my-auto technos" style="margin-top: 10%">
          </div>
             
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/front/btp.png" width="50%" class="flex mx-auto my-auto" style="margin-top: 10%">
-               </div>
-             </div>
-           </div>
+         <div>
+            <img src="/img/landscape/Sap/front/btp.png" width="50%" class="flex mx-auto my-auto" style="margin-top: 10%">
          </div>
             
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/front/C4.webp" width="50%" class="flex mx-auto my-auto">
-               </div>
-             </div>
-           </div>
+         <div>
+            <img src="/img/landscape/Sap/front/C4.webp" width="50%" class="flex mx-auto my-auto technos">
          </div>
             
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/front/analytics.png" width="50%" class="flex mx-auto my-auto">
-               </div>
-             </div>
-           </div>
+         <div>
+            <img src="/img/landscape/Sap/front/analytics.png" width="50%" class="flex mx-auto my-auto technos">
          </div>
             
           
         </div></section>
-        <section id="back" class="tab" style="scroll-margin-block-start: 140px">
+        <section id="back" class="tab" style="scroll-margin-block-start: 120px">
           
-          <div class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center">
+          <div class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-6 justify-center">
          
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/back/abap.png" width="50%" class="flex mx-auto my-auto">
-               </div>
-             </div>
-           </div>
+         <div>
+            <img src="/img/landscape/Sap/back/abap.png" width="50%" class="flex mx-auto my-auto technos" style="margin-top: 10%">
          </div>
             
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/back/odata.jpg" width="50%" class="flex mx-auto my-auto">
-               </div>
-             </div>
-           </div>
+         <div>
+            <img src="/img/landscape/Sap/back/odata.jpg" width="50%" class="flex mx-auto my-auto technos" style="margin-top: 10%">
          </div>
             
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/back/abode.png" width="45%" class="flex mx-auto my-auto" style="margin-top: -15%">
-               </div>
-             </div>
-           </div>
+         <div>
+            <img src="/img/landscape/Sap/back/abode.png" width="45%" class="flex mx-auto my-auto technos">
          </div>
             
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/back/business.png" width="50%" class="flex mx-auto my-auto">
-               </div>
-             </div>
-           </div>
+         <div>
+            <img src="/img/landscape/Sap/back/business.png" width="50%" class="flex mx-auto my-auto technos" style="margin-top: 5%">
          </div>
             
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/back/s4.png" width="50%" class="flex mx-auto my-auto" style="margin-top: 10%">
-               </div>
-             </div>
-           </div>
+         <div>
+            <img src="/img/landscape/Sap/back/s4.png" width="50%" class="flex mx-auto my-auto technos" style="margin-top: 15%">
          </div>
             
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img src="/img/landscape/Sap/back/mule.png" width="50%" class="flex mx-auto my-auto">
-               </div>
-             </div>
-           </div>
+         <div>
+            <img src="/img/landscape/Sap/back/mule.png" width="50%" class="flex mx-auto my-auto technos" style="margin-top: 5%">
          </div>
-            
-          
         </div></section>
-      </section>
-        <section id="back" class="tab" style="scroll-margin-block-start: 140px">
-          {{if $data.landscape.back}}
-          <div
-          class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center"
-         >
-         {{ range $data.landscape.back }}
-         <div class="overflow-hidden">
-           <div class="">
-             <div class="font-bold text-xl mb-2 py-3 px-5 ml-8">
-               <div class="flex">
-                 <img
-                   src="{{ .icon }}"
-                   width="50%"
-                   class="flex mx-auto my-auto"
-                 />
-               </div>
-             </div>
-           </div>
-         </div>
-            {{end}}
-          {{end}}
-        </section>
-      </section>
 
-      <!-- <section id="team" class="team-members" style="scroll-margin-block-start: 140px">
+      <!-- <section id="team" class="team-members" style="scroll-margin-block-start: 120px">
         <div class="md:flex justify-center">
           {{ partial "home_title" (dict "title" "Meet us") }}
         </div>
@@ -345,16 +227,16 @@
           </div>
       </section> -->
 
-      <section id="team" class="mt-12"  style="scroll-margin-block-start: 140px">
+      <section id="team" style="margin-top: 4rem; scroll-margin-block-start: 120px">
         <div class="md:flex justify-center">
           {{ partial "home_title" (dict "title" "Team Activities") }}
         </div>
         <br />
-        <p class="text-center">As a large team, we have many diverse activities</p>
+        <p class="text-center">As a large team, we have many diverse activities.</p>
         <br />
         {{if $data.team.activities}}
         <div
-          class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4"
+          class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2"
         >
           {{ range $data.team.activities }}
           <div class="w-full rounded overflow-hidden shadow-lg">
@@ -365,8 +247,8 @@
               style="margin-top: 10px; margin-left: 20px;"
               />            
             </a>         
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">{{ .title }}</div>
+            <div class="px-6 py-4 desc">
+              <div class="font-bold text-l mb-2">{{ .title }}</div>
               <p class="text-gray-700 text-base">
                 {{ .text }}
               </p>
@@ -379,7 +261,7 @@
         {{end}}
       </section>
 
-      <section id="team" class="mt-12" style="scroll-margin-block-start: 140px">
+      <section id="team" style="margin-top: 4rem; scroll-margin-block-start: 120px">
         <div class="md:flex justify-center">
           {{ partial "home_title" (dict "title" "Team Values") }}
         </div>
@@ -392,11 +274,11 @@
             <div style="background-color: #1f293a;">
               <div class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
                 {{ range $data.team.values }}
-                  <div class="w-full rounded overflow-hidden shadow-lg">
+                  <div class="w-full rounded overflow-hidden">
                     <img
                       class=" mx-auto my-auto"
                       src="{{ .image }}"
-                      width="134px"
+                      width="80px"
                     />               
                     <div class="px-6 py-4">
                       <p class="text-white text-base">
@@ -410,11 +292,11 @@
             <div style="background-color: #1f293a;">
               <div class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
                 {{ range $data.team.values1 }}
-                  <div class="w-full rounded overflow-hidden shadow-lg">
+                  <div class="w-full rounded overflow-hidden">
                     <img
-                      class=" py-1 px-3 mx-auto my-auto"
+                      class="mx-auto my-auto"
                       src="{{ .image }}"
-                      width="150px"
+                      width="80px"
                     />                
                     <div class="px-6 py-4">
                       <p class="text-white text-base">
@@ -426,23 +308,21 @@
               </div>
             </div>
           </div>
-          
           <div class="prevNext">
-            <div><a href="#s2" class="arrow-left"></a><a href="#s1" class="arrow-right"></a><a href="#s1" class="arrow-left"></a><a href="#s2" class="arrow-right"></a></div>
-            <div><a href="#s1" class="arrow-left"></a><a href="#s2" class="arrow-right"></a><a href="#s2" class="arrow-left"></a><a href="#s1" class="arrow-right"></a></div>
+            <div><a></a><a href="#s1" class="arrow-right"></a></a><a href="#s2" class="arrow-right"></a></div>
+            <div><a href="#s1" class="arrow-left"></a></div>
           </div>
-        
         </div>
       </section>
     
-      <section id="team" class="mt-12 mb-5" style="scroll-margin-block-start: 140px">
+      <section id="team" style="scroll-margin-block-start: 120px">
         <div class="md:flex justify-center">
-          {{ partial "home_title" (dict "title" "Certifications Part") }}
+          {{ partial "home_title" (dict "title" "Team Certifications") }}
         </div>
         <br />
         {{if $data.team.certification}}
         <div
-        class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4"
+        class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2"
       >
         {{ range $data.team.certification }}
         <div class="w-full rounded overflow-hidden shadow-lg">
@@ -452,8 +332,8 @@
             width="130px"
             style="margin-top: 10px; margin-left: 5px;"
             />                 
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">{{ .title }}</div>
+          <div class="px-6 py-4 desc">
+            <div class="font-bold text-l mb-2">{{ .title }}</div>
             <p class="text-gray-700 text-base">
               {{ .text }}
             </p>
@@ -465,4 +345,4 @@
       </section>
     </main>
   </div>
-  
+</div>

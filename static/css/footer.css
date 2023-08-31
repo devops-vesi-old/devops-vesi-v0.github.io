@@ -5,8 +5,8 @@ footer {
     align-items: center;
     justify-content: center;
     font-size: 23px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
   }
   .content-footer {
@@ -16,17 +16,15 @@ footer {
   footer {
     font-size: 90%;
   }
-  .imgfooter {
-    width: 90%;
-  }
   
-  @media (max-width:585px) {
+  @media (max-width:650px) {
     footer {
-      font-size: 40%;
+      font-size: 50%;
     }
-  
+  }
+
+  @media screen and (min-width: 650px) {
     .imgfooter {
-      width: 180%;
-      height: auto;
+      width: 50%;
     }
   }

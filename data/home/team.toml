@@ -37,7 +37,7 @@
     title = "Exploration"
     image = "/img/team/activities/exploration.png"
     text = """
-        Various explorations of new technologies and innovation.
+        Various explorations of new technologies and innovations.
     """
 
 [[members]]
@@ -146,7 +146,12 @@
 [[certification]]
     image = "/img/team/certifications/iso.png"
     title = "ISO 27001"
-    text = "ISO 27001 is an international standard for information systems security."
+    text = "ISO 27001 is an international standard for information systems security. Knowledge of the 2021 OWASP Top 10 through the team."
+
+[[certification]]
+    image = "/img/team/certifications/green-it.png"
+    title = "Green IT"
+    text = "As players in the digital sector, the subject of Green IT drives our day-to-day work."
 
 [[certification]]
     image = "/img/team/certifications/clean-code.png"
@@ -156,4 +161,4 @@
 [[certification]]
     image = "/img/team/certifications/accessibility.png"
     title = "Accessibility"
-    text = "Compliance with accessibility standards on our application park."
+    text = "Compliance with accessibility standards WGAC and RGAA on our application park."
