@@ -31,6 +31,7 @@ theme = 'SimpleIntro'
     urlFooterImg = "/img/logodev.png"
     Adress = "8 avenue du Stade de France, 93200 Saint-Denis"
     Company = "Vinci Energies Systèmes d'Information"
+    favicon = "/img/favicon.ico"
 
     mailAdress = "exemple@gmail.com"
     defaultContentLanguage = 'en'
