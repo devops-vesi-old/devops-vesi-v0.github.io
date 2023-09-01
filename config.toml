@@ -1,6 +1,6 @@
 baseURL = 'DevTeam'
 languageCode = 'en-us'
-title = 'DevTeam'
+title = 'VESI DevTeam'
 theme = 'SimpleIntro'
 
 [menus]
