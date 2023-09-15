@@ -6,6 +6,7 @@
       <a href="#about">About us</a>
       <a href="#landscape">Landscape</a>
       <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
       <!-- <a href="https://www.jobteaser.com/fr/companies/vinci-energies-si/job-offers" target="_blank">Career</a> -->
     </nav>
 
@@ -18,7 +19,7 @@
     <nav role="navigation" id="topnav_responsive_menu">
       <ul>
         {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        <li><a href="{{ .URL }}" onclick="showResponsiveMenu()">{{ .Name }}</a></li>
         {{end}}
       </ul>
     </nav>

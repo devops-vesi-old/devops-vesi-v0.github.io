@@ -1,4 +1,4 @@
-<div class="overflow-hidden">
+<div class="overflow-hidden" onclick="show">
     <div
       id="mainBG"
       style="background-color: #1f293a;">
@@ -20,7 +20,8 @@
           {{ partial "home_title" (dict "title" "About Us") }}
         </div>
         <br />
-        <div class="mt-4 md:mt-0 md:ml-4 justify-center text-center">
+        <div class="mt-4 md:mt-0 md:ml-4 justify-center text-center grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 lg:grid-flow-row gap-5 justify-center">
+          <div>
           <div class="text-2xl font-bold">
               {{ if $data.about.title }}{{$data.about.title}}{{else}}You can put
               text in data/home/about.toml/title{{end}}
@@ -32,10 +33,26 @@
               data/home/about.toml/text{{end}}
             </div>
           </div>
-          <br />
+          </div>
+          <div class="overflow-hidden">
+            <div class="sliderContainer">
+              <div class="logoSlider" style="margin-top: 5%;">
+                <img src="/img/team/members/bball.png">
+                <img src="/img/team/members/bball.png">
+                <img src="/img/team/members/bball.png">
+                <img src="/img/team/members/bball.png">
+                <img src="/img/team/members/bball.png">
+                <img src="/img/team/members/bball.png">
+              </div>
+            </div>
+          </div>
+          <div>
+
+          </div>
+          <div>
           <div class="text-2xl font-bold">
             {{ if $data.about.title1 }}{{$data.about.title1}}{{else}}You can put
-            text in data/home/about.toml/title{{end}}
+            text in data/home/about.toml/title1{{end}}
           </div>
           <div class="text-lg mt-3">
             <div>
@@ -44,6 +61,7 @@
               data/home/about.toml/text1{{end}}
             </div>
           </div>
+          </div>
         </div>
       </section>
       <section id="landscape" style="margin-top: 4rem; scroll-margin-block-start: 120px">
@@ -51,10 +69,9 @@
           <div class="text-3xl title-deco tracking-wide">
             Landscape in numbers
           </div>
-
         </div>
           
-          <div class="mt-10 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 justify-center">
+          <div class="mt-10 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-4 justify-center">
           
           <div class="overflow-hidden">
             <div>
@@ -67,7 +84,7 @@
                 </div>
               </div>
               <p class="text-center">
-                 Users
+                 Codex Users
               </p>
             </div>
           </div>
@@ -77,7 +94,7 @@
               <div class="font-bold text-xl mx-auto my-auto">
                 <div>
                   <img src="/img/landscape/numbers/countries.png" width="20%" class="flex mx-auto my-auto">
-                  <div class="text-center"> 
+                  <div class="text-center">
                     21
                   </div>
                 </div>
@@ -87,6 +104,9 @@
               </p>
             </div>
           </div>
+
+          <div></div>
+          <div></div>
           
           <div class="overflow-hidden">
             <div class="numbers-icons">
@@ -110,30 +130,27 @@
                 <div>
                   <img src="/img/landscape/numbers/sapVersion.png" width="20%" class="flex mx-auto my-auto">
                   <div class="text-center"> 
-                    1.108
+                    2020
                   </div>
                 </div>
               </div>
               <p class="text-center">
-                SAPUI5 Version
+                S/4HANA Version
               </p>
             </div>
           </div>
-          
         </div>
-
         <div class="md:flex justify-center" style="margin-top: 4rem; scroll-margin-block-start: 120px">
           <div class="text-3xl title-deco tracking-wide">
-  SAP Landscape
-</div>
-
+            SAP Landscape
+          </div>
         </div>
         <br>
         <p class="text-center">You can find here a small list of the SAP tools we use in our daily work.</p>
         <br>
         <input id="tab1" type="radio" name="tabs" checked="">
         <label for="tab1" style="font-size: 100%;">Front-end</label>
-          
+        
         <input id="tab2" type="radio" name="tabs">
         <label for="tab2" style="font-size: 100%;">Back-end</label>
         <br>
@@ -271,7 +288,7 @@
         
           <div class="slider">
             <div style="background-color: #1f293a;">
-              <div class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
+              <div class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4">
                 {{ range $data.team.values }}
                   <div class="w-full rounded overflow-hidden">
                     <img
@@ -288,15 +305,26 @@
                 {{end}}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="team" style="margin-top: 4rem; scroll-margin-block-start: 120px">
+        <div class="md:flex justify-center">
+          {{ partial "home_title" (dict "title" "Team Values") }}
+        </div>
+        <br/>
+        <div class="value">
+        
+          <div class="slider overflow-hidden">
             <div style="background-color: #1f293a;">
-              <div class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
-                {{ range $data.team.values1 }}
+              <div class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-1 lg:grid-cols-6 gap-4" style="width: 200%;">
+                {{ range $data.team.values }}
                   <div class="w-full rounded overflow-hidden">
                     <img
-                      class="mx-auto my-auto"
+                      class=" mx-auto my-auto"
                       src="{{ .image }}"
                       width="80px"
-                    />                
+                    />
                     <div class="px-6 py-4">
                       <p class="text-white text-base">
                         {{ .text }}
@@ -306,22 +334,23 @@
                 {{end}}
               </div>
             </div>
+            
           </div>
           <div class="prevNext">
             <div><a></a><a href="#s1" class="arrow-right"></a></a><a href="#s2" class="arrow-right"></a></div>
             <div><a href="#s1" class="arrow-left"></a></div>
           </div>
         </div>
-      </section>
+      </section> -->
     
       <section id="team" style="scroll-margin-block-start: 120px">
         <div class="md:flex justify-center">
           {{ partial "home_title" (dict "title" "Team Certifications") }}
         </div>
-        <br />
+        <br/>
         {{if $data.team.certification}}
         <div
-        class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-2"
+        class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2"
       >
         {{ range $data.team.certification }}
         <div class="w-full rounded overflow-hidden shadow-lg">
@@ -331,17 +360,41 @@
             width="130px"
             style="margin-top: 10px; margin-left: 5px;"
             />                 
-          <div class="px-6 py-4 desc">
-            <div class="font-bold text-l mb-2">{{ .title }}</div>
-            <p class="text-gray-700 text-base">
-              {{ .text }}
-            </p>
+            <div class="px-6 py-4 desc">
+              <div class="font-bold text-l mb-2">{{ .title }}</div>
+              <p class="text-gray-700 text-base">
+                {{ .text }}
+              </p>
+            </div>
           </div>
+          {{end}}
         </div>
-        {{end}}
-      </div>
           {{end}}
       </section>
+
+      <section id="contact" style="margin-top: 4rem; scroll-margin-block-start: 120px">
+        <div class="md:flex justify-center">
+          <div class="text-3xl title-deco tracking-wide">
+            Contact
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center;">
+        <form action="https://fabform.io/f/1KamHTM" method="post" class="mt-8" style="justify-content: center;">
+          <label for="firstName" style="all:unset;">First Name</label>
+          <input name="firstName" type="text" required style="all: unset; border: 2px solid #ccc; margin-left: 5px;">
+          <br/>
+          <br/>
+          <label for="lastName" style="all:unset;">Last Name</label>
+          <input name="lastName" type="text" required style="all:unset; border: 2px solid #ccc; margin-left: 5px;">
+          <br/>
+          <br/>
+          <label for="email" style="all:unset;">Email</label>
+          <input name="email" type="email" required style="all:unset; border: 2px solid #ccc; margin-left: 5px;">
+          <br/>
+          <br/>
+          <button type="submit" class="send_button">Send</button>
+        </form>
+        </div>
     </main>
   </div>
 </div>

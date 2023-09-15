@@ -1,4 +1,4 @@
-# liste des chiffres clés
+# Liste des chiffres clés
 [[numbers]]
     icon = "/img/landscape/numbers/user.png"
     name = "44K+"
@@ -16,11 +16,13 @@
 
 [[numbers]]
     icon = "/img/landscape/numbers/sapVersion.png"
-    name = "1.108"
-    text = "SAPUI5 Version"
+    name = "2020"
+    text = "S/4HANA Version"
 
-# Contenu SAP landscapes
-# liste du front
+
+# Contenu SAP Landscape
+
+# Liste côté Front
 [[front]]
     icon = "/img/landscape/Sap/front/SAPUI5.png"
     
@@ -48,8 +50,7 @@
 [[front]]
     icon = "/img/landscape/Sap/front/analytics.png"
 
-# liste du back
-
+# Liste côté Back
 [[back]]
     icon = "/img/landscape/Sap/back/abap.png"
 
@@ -67,9 +68,3 @@
 
 [[back]]
     icon = "/img/landscape/Sap/back/mule.png"
-
-
-
-
-
-

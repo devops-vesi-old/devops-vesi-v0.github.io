@@ -40,29 +40,6 @@
         Various explorations of new technologies and innovations.
     """
 
-[[members]]
-    icon = "/img/team/members/walid.jpeg"
-
-[[members]]
-    icon = "/img/team/members/nizard.jpeg"
-
-[[members]]
-    icon = "/img/team/members/nicolas.jpeg"
-
-[[members]]
-    icon = "/img/team/members/haifan.png"
-
-[[members]]
-    icon = "/img/team/members/nizare.png"
-
-[[members]]
-    icon = "/img/team/members/amin.jpeg"
-
-[[members]]
-    icon = "/img/team/members/ali.jpg"
-
-[[members]]
-    icon = "/img/team/members/zouhour.png"
 
 [[members]]
     icon = "/img/team/members/walid.jpeg"
@@ -112,6 +89,29 @@
 [[members]]
     icon = "/img/team/members/zouhour.png"
 
+[[members]]
+    icon = "/img/team/members/walid.jpeg"
+
+[[members]]
+    icon = "/img/team/members/nizard.jpeg"
+
+[[members]]
+    icon = "/img/team/members/nicolas.jpeg"
+
+[[members]]
+    icon = "/img/team/members/haifan.png"
+
+[[members]]
+    icon = "/img/team/members/nizare.png"
+
+[[members]]
+    icon = "/img/team/members/amin.jpeg"
+
+[[members]]
+    icon = "/img/team/members/ali.jpg"
+
+[[members]]
+    icon = "/img/team/members/zouhour.png"
 
 
 [[values]]
@@ -126,15 +126,15 @@
     image = "/img/team/values/sharing.png"
     text = "Innovation & Sharing"
 
-[[values1]]
+[[values]]
     image = "/img/team/values/trust.png"
     text = "Autonomy & Trust"
 
-[[values1]]
+[[values]]
     image = "/img/team/values/disabilities.png"
     text = "Involved in disabilities issues"
 
-[[values1]]
+[[values]]
     image = "/img/team/values/team.png"
     text = "Team working"
 
@@ -149,16 +149,11 @@
     text = "ISO 27001 is an international standard for information systems security. Knowledge of the 2021 OWASP Top 10 through the team."
 
 [[certification]]
-    image = "/img/team/certifications/green-it.png"
-    title = "Green IT"
-    text = "As players in the digital sector, the subject of Green IT drives our day-to-day work."
-
-[[certification]]
     image = "/img/team/certifications/clean-code.png"
     title = "Clean-Code Coaching"
     text = "Coaching by SAP Champion followed by some members of the team to introduce the concept of Clean-Code in our work perimeter."
 
 [[certification]]
-    image = "/img/team/certifications/accessibility.png"
-    title = "Accessibility"
-    text = "Compliance with accessibility standards WGAC and RGAA on our application park."
+    image = "/img/team/certifications/SIT-label-level2.png"
+    title = "Sustainable IT - Level 2"
+    text = "This label validates our commitment to a more responsible use of digital technology, and our respect for accessibility standards."

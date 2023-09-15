@@ -20,10 +20,10 @@ theme = 'SimpleIntro'
         weight = "30"
         url = "#team"
     [[menu.main]]
-        identifier = "career"
-        name = "Career"
+        identifier = "contact"
+        name = "Contact"
         weight = "40"
-        url = "https://www.jobteaser.com/fr/companies/vinci-energies-si/job-offers"
+        url = "#contact"
 
 [params]
     maintext = "Think it, Build it !"
