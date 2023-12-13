@@ -10,18 +10,37 @@
 
 
 <script type="text/javascript">
+
     function showResponsiveMenu() {
       var menu = document.getElementById("topnav_responsive_menu");
       var icon = document.getElementById("topnav_hamburger_icon");
       var root = document.getElementById("root");
-    if (menu.className === "") {
-      menu.className = "open";
-      icon.className = "open";
-      root.style.overflowY = "hidden";
-    } else {
+
+      if (menu.className === "") {
+        menu.className = "open";
+        icon.className = "open";
+        root.style.overflowY = "hidden";
+      } else {
+        menu.className = "";
+        icon.className = "";
+        root.style.overflowY = "";
+      }
+
+      document.onclick = function(e) {
+          if (menu.contains(e.target)) {
+            closeResponsiveMenu();
+          }
+      }
+    }
+
+    function closeResponsiveMenu() {
+      var menu = document.getElementById("topnav_responsive_menu");
+      var icon = document.getElementById("topnav_hamburger_icon");
+      var root = document.getElementById("root");
+
       menu.className = "";
       icon.className = "";
       root.style.overflowY = "";
     }
-  }
+
 </script>

@@ -1,400 +1,370 @@
 <div class="overflow-hidden" onclick="show">
-    <div
-      id="mainBG"
-      style="background-color: #1f293a;">
-      <div class="centerAll main-image">
+  <div id="mainBG" style="background-color: #1f293a;">
+    <div class="centerAll main-image">
+      <div> <img src="/img/logodev.png" width="100%" /> </div>
+      <div class="text text-xl text-center">
+        {{if $.Site.Params.maintext}}
+        {{$.Site.Params.maintext}}
+        {{else}}Edit config.toml/params{{end}}
+      </div>
+    </div>
+  </div>{{$data := .Site.Data.home}}<main class="container mx-auto mt-8 px-4 xl:px-0">
+
+
+
+
+
+    <section id="about" style="margin-top: 3rem; scroll-margin-block-start: 120px">
+      <div class="md:flex justify-center overflow-hidden">{{partial "home_title" (dict "title" "About Us")}}</div> <br>
+      <div
+        class="mt-4 md:mt-0 md:ml-4 justify-center text-center grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 lg:grid-flow-row gap-5">
         <div>
-         <img src="/img/logodev.png" width="100%"/>
+          <div class="text-2xl font-bold">
+            {{if $data.about.title}}
+            {{$data.about.title}}
+            {{else}}You can put text in data/home/about.toml/title{{end}}
+          </div>
+          <div class="text-lg mt-3">
+            <div>
+              {{if $data.about.text}}
+              {{replace $data.about.text "\n" "<br />" | safeHTML}}
+              {{else}}You can put text in data/home/about.toml/text{{end}}
+            </div>
+          </div>
         </div>
+        <div class="overflow-hidden">
+          <div class="sliderContainer slider-position">
+            <div class="slider">
+              <div class="slide-track">
+                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="mt-4">
+          <div class="text-2xl font-bold text-center">{{if $data.about.title1}}
+            {{$data.about.title1}}
+            {{else}}You can put text in data/home/about.toml/title1{{end}}
+          </div>
+          <div class="text-lg mt-3 text-center">
+            <div>{{if $data.about.text1}}
+              {{replace $data.about.text1 "\n" "<br />" | safeHTML}}
+              {{else}}You can put text in data/home/about.toml/text1{{end}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="text text-xl text-center">
 
-          {{if $.Site.Params.maintext}}{{ $.Site.Params.maintext }}{{else}}Edit config.toml/params{{end}}
+
+
+
+
+    <section id="landscape"  class="px-6 py-4" style="margin-top: 6rem; scroll-margin-block-start: 120px">
+      <div class="md:flex justify-center">
+        <div class="text-3xl title-deco tracking-wide"> Our Work in Numbers </div>
+      </div>
+      <div class="mt-10 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-7 justify-center">
+        <div class="overflow-hidden">
+          <div>
+            <div class="font-bold text-xl mx-auto my-auto">
+              <div> <img src="/img/landscape/numbers/user.png" width="40%" class="flex mx-auto my-auto">
+                <div class="text-center"> 44K+ </div>
+              </div>
+            </div>
+            <p class="text-center"> Codex Users </p>
+          </div>
+        </div>
+        <div class="overflow-hidden">
+          <div>
+            <div class="font-bold text-xl mx-auto my-auto">
+              <div> <img src="/img/landscape/numbers/countries.png" width="40%" class="flex mx-auto my-auto">
+                <div class="text-center"> 21 </div>
+              </div>
+            </div>
+            <p class="text-center"> Countries </p>
+          </div>
+        </div>
+        <div class="overflow-hidden">
+          <div>
+            <div class="font-bold text-xl mx-auto my-auto">
+              <div> <img src="/img/landscape/numbers/countries.png" width="40%" class="flex mx-auto my-auto">
+                <div class="text-center"> 21 </div>
+              </div>
+            </div>
+            <p class="text-center"> Countries </p>
+          </div>
+        </div>
+        <div class="responsive_div"></div>
+        <div class="overflow-hidden">
+          <div class="numbers-icons">
+            <div class="font-bold text-xl mx-auto my-auto">
+              <div> <img src="/img/landscape/numbers/apps.png" width="40%" class="flex mx-auto my-auto">
+                <div class="text-center"> 131 </div>
+              </div>
+            </div>
+            <p class="text-center"> Active apps </p>
+          </div>
+        </div>
+        <div class="overflow-hidden">
+          <div class="numbers-icons">
+            <div class="font-bold text-xl mx-auto my-auto">
+              <div> <img src="/img/landscape/numbers/sapVersion.png" width="40%" class="flex mx-auto my-auto">
+                <div class="text-center"> X K+ </div>
+              </div>
+            </div>
+            <p class="text-center"> Lines of Code </p>
+          </div>
+        </div>
+        <div class="overflow-hidden">
+          <div  class="numbers-icons">
+            <div class="font-bold text-xl mx-auto my-auto">
+              <div> <img src="/img/landscape/numbers/countries.png" width="40%" class="flex mx-auto my-auto">
+                <div class="text-center"> 21 </div>
+              </div>
+            </div>
+            <p class="text-center"> Countries </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <section class="overflow-hidden px-6 py-4" style="margin-top: 6rem; scroll-margin-block-start: 120px"></section>
+    <div class="md:flex justify-center">
+      <div class="text-3xl title-deco tracking-wide"> SAP Landscape </div>
+    </div>
+    <div class="container23 mt-12 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 justify-center">
+      <div class="justify-center premise-list" style="display: grid;">
+        <ul>
+          <div class="text-2xl font-bold text-center">
+            On-Premise & Back
+          </div>
+          <a href="https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-us/abenabap_oview.htm" target="_blank">
+            <li id="TEST">ABAP</li>
+          </a>
+          <a href="https://www.sap.com/products/erp/s4hana.html" target="_blank">
+            <li id="TEST">SAP S/4HANA 2020</li>
+          </a>
+          <a href="https://help.sap.com/doc/6bbeffd4801447c0a67b30968778a24f/Cloud/en-US/abap_cds_dev_user_guide_EN.pdf" target="_blank">
+            <li id="TEST">ABAP CDS</li>
+          </a>
+          <a href="https://www.odata.org/documentation/" target="_blank">
+            <li id="TEST">ODATA</li>
+          </a>
+          <a href="https://help.sap.com/docs/forms-service-by-adobe/sap-forms-service-cf/sap-forms-service-by-adobe" target="_blank">
+            <li id="TEST">Adobe Forms</li>
+          </a>
+          <a href="https://docs.mulesoft.com/general/" target="_blank">
+            <li id="TEST">Mulesoft</li>
+          </a>
+          <a href="https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/c238d694b825421f940829321ffa326a/12bdb73f7f6a4bfe95540b31af29ac10.html" target="_blank">
+            <li id="TEST">ABAP Eclipse</li>
+          </a>
+        </ul>
+      </div>
+      <div class="justify-center list-responsive cloud-list" style="display: grid;">
+        <ul>
+          <div class="text-2xl font-bold text-center">
+            Cloud & New Tech
+          </div>
+          <a href="https://sapui5.hana.ondemand.com/#/topic" target="_blank">
+            <li id="TEST">SAPUI5</li>
+          </a>
+          <a href="https://www.sap.com/products/technology-platform/fiori.html" target="_blank">
+            <li id="TEST">Fiori</li>
+          </a>
+          <a href="https://sapui5.hana.ondemand.com/#/topic" target="_blank">
+            <li id="TEST">SAP BTP</li>
+          </a>
+          <a href="https://www.sap.com/products/technology-platform/business-application-studio.html" target="_blank">
+            <li id="TEST">SAP BAS</li>
+          </a>
+          <a href="https://docs.gitlab.com/" target="_blank">
+            <li id="TEST">GitLab</li>
+          </a>
+          <a href="https://docs.sonarsource.com/sonarqube/latest/" target="_blank">
+            <li id="TEST">SonarQube</li>
+          </a>
+          <a href="https://azure.microsoft.com/en-in/resources/cloud-computing-dictionary/what-is-devops" target="_blank">
+            <li id="TEST">DevOps</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+</div>
+<!-- <p class="text-center">You can find here a small list of the SAP tools we use in our daily work.</p> <br> <input
+      id="tab1" type="radio" name="tabs" checked=""> <label for="tab1" style="font-size: 100%;">Cloud & New Tech</label>
+    <input id="tab2" type="radio" name="tabs"> <label for="tab2" style="font-size: 100%;">On-premise & Back</label> <br>
+    <section id="front" class="tab" style="scroll-margin-block-start: 120px">
+      <div class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center">
+        <div> <a href="https://sapui5.hana.ondemand.com/#/topic" target="_blank"><img
+              src="/img/landscape/Sap/front/SAPUI5.png" width="50%" class="flex mx-auto my-auto technos"
+              style="margin-top: -2%"></a> </div>
+        <div> <a href="https://docs.sonarsource.com/sonarqube/latest/" target="_blank"><img
+              src="/img/landscape/Sap/front/sonar.png" width="50%" class="flex mx-auto my-auto technos"></a> </div>
+        <div> <a href="https://docs.gitlab.com/" target="_blank"><img src="/img/landscape/Sap/front/gitlab.png"
+              width="50%" class="flex mx-auto my-auto technos"></a> </div>
+        <div> <a href="https://www.sap.com/products/technology-platform/fiori.html" target="_blank"><img
+              src="/img/landscape/Sap/front/fiori.png" width="45%" class="flex mx-auto my-auto technos"
+              style="margin-top: 11%"></a> </div>
+        <div> <a href="https://www.sap.com/products/technology-platform/business-application-studio.html"
+            target="_blank"><img src="/img/landscape/Sap/front/bas.png" width="38%" class="flex mx-auto my-auto technos"
+              style="margin-top: 15%;"></a> </div>
+        <div> <a href="https://azure.microsoft.com/en-in/resources/cloud-computing-dictionary/what-is-devops"
+            target="_blank"><img src="/img/landscape/Sap/front/devops.png" width="50%"
+              class="flex mx-auto my-auto technos" style="margin-top: 10%"></a> </div>
+        <div> <a href="https://www.sap.com/products/technology-platform.html" target="_blank"><img
+              src="/img/landscape/Sap/front/btp.png" width="50%" class="flex mx-auto my-auto"
+              style="margin-top: 10%"></a> </div>
+        <div> <a href="https://blogs.sap.com/2018/08/08/what-is-sap-c4hana-and-why-should-you-care/"
+            target="_blank"><img src="/img/landscape/Sap/front/C4.webp" width="50%"
+              class="flex mx-auto my-auto technos"></a> </div>
+        <div> <a href="https://www.sap.com/products/technology-platform/cloud-analytics.html" target="_blank"><img
+              src="/img/landscape/Sap/front/analytics.png" width="50%" class="flex mx-auto my-auto technos"></a> </div>
+      </div>
+    </section>
+
+
+    <section id="back" class="tab" style="scroll-margin-block-start: 120px">
+      <div class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-6 justify-center">
+        <div> <a href="https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-us/abenabap_oview.htm"
+            target="_blank"></a><img src="/img/landscape/Sap/back/abap.png" width="50%"
+            class="flex mx-auto my-auto technos" style="margin-top: 10%"></a> </div>
+        <div> <a href="https://www.odata.org/documentation/" target="_blank"></a><img
+            src="/img/landscape/Sap/back/odata.jpg" width="50%" class="flex mx-auto my-auto technos"
+            style="margin-top: 10%"></a> </div>
+        <div> <a href="https://help.sap.com/docs/forms-service-by-adobe/sap-forms-service-cf/sap-forms-service-by-adobe"
+            target="_blank"></a><img src="/img/landscape/Sap/back/abode.png" width="45%"
+            class="flex mx-auto my-auto technos"></a> </div>
+        <div> <a
+            href="https://help.sap.com/docs/SAP_NETWEAVER_750/a602ff71a47c441bb3000504ec938fea/4f41e8a0dd89535fe10000000a421937.html"
+            target="_blank"></a><img src="/img/landscape/Sap/back/business.png" width="50%"
+            class="flex mx-auto my-auto technos" style="margin-top: 5%"></a> </div>
+        <div> <a href="https://www.sap.com/products/erp/s4hana.html" target="_blank"></a><img
+            src="/img/landscape/Sap/back/s4.png" width="50%" class="flex mx-auto my-auto technos"
+            style="margin-top: 15%"></a> </div>
+        <div> <a href="https://docs.mulesoft.com/general/" target="_blank"></a><img
+            src="/img/landscape/Sap/back/mule.png" width="50%" class="flex mx-auto my-auto technos"
+            style="margin-top: 5%"></a> </div>
+      </div>
+    </section> -->
+</section>
+
+
+
+
+
+
+
+
+<section id="team" class="px-6 py-4" style="margin-top: 4rem; scroll-margin-block-start: 120px">
+    <div class="md:flex justify-center"> {{partial "home_title" (dict "title" "Team Activities")}} </div>
+  <br/>
+  {{if $data.team.activities}}
+  <div class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2">{{range
+    $data.team.activities}}
+    <div class="w-full rounded overflow-hidden shadow-lg"> <img src="{{ .image }}" width="80px"
+        style="margin-top: 10px; margin-left: 20px;" /> </a>
+      <div class="px-6 py-4 desc">
+        <div class="font-bold text-l mb-2">{{.title}}</div>
+        <p class="text-gray-700 text-base">{{.text}}</p>
+      </div>
+    </div>{{end}}
+  </div>{{else}}<div class="mt-4 text-xl text-center">Projects does not exist</div>{{end}}
+</section>
+
+
+
+
+
+
+
+<section id="team" class="px-6 py-4" style="margin-top: 4rem; scroll-margin-block-start: 120px">
+  <div class="md:flex justify-center">
+    <div class="text-3xl title-deco tracking-wide"> {{partial "home_title" (dict "title" "Team Values")}} </div>
+  </div> <br/> <br/>
+  <div class="value">
+    <div class="slider2">
+      <div style="background-color: #1f293a;">
+        <div class="mt-4 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-8">{{range
+          $data.team.values}}
+          <div class="w-full rounded overflow-hidden"> <img class="mx-auto my-auto values-logo" src="{{ .image }}" />
+            <div class="px-6 py-4">
+              <p class="text-white text-base">{{.text}}</p>
+            </div>
+          </div>{{end}}
         </div>
       </div>
     </div>
-    {{ $data := .Site.Data.home }}
-    <main class="container mx-auto mt-8 px-4 xl:px-0">
-      <section id="about" style="margin-top: 3rem; scroll-margin-block-start: 120px">
-        <div class="md:flex justify-center">
-          {{ partial "home_title" (dict "title" "About Us") }}
-        </div>
-        <br />
-        <div class="mt-4 md:mt-0 md:ml-4 justify-center text-center grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 lg:grid-flow-row gap-5 justify-center">
-          <div>
-          <div class="text-2xl font-bold">
-              {{ if $data.about.title }}{{$data.about.title}}{{else}}You can put
-              text in data/home/about.toml/title{{end}}
-          </div>
-          <div class="text-lg mt-3">
-            <div>
-              {{ if $data.about.text}}{{ replace $data.about.text "\n" "<br />" | safeHTML }}
-              {{else}}You can put text in
-              data/home/about.toml/text{{end}}
-            </div>
-          </div>
-          </div>
-          <div class="overflow-hidden">
-            <div class="sliderContainer">
-              <div class="logoSlider" style="margin-top: 5%;">
-                <img src="/img/team/members/bball.png">
-                <img src="/img/team/members/bball.png">
-                <img src="/img/team/members/bball.png">
-                <img src="/img/team/members/bball.png">
-                <img src="/img/team/members/bball.png">
-                <img src="/img/team/members/bball.png">
-              </div>
-            </div>
-          </div>
-          <div>
-
-          </div>
-          <div>
-          <div class="text-2xl font-bold">
-            {{ if $data.about.title1 }}{{$data.about.title1}}{{else}}You can put
-            text in data/home/about.toml/title1{{end}}
-          </div>
-          <div class="text-lg mt-3">
-            <div>
-              {{ if $data.about.text1}}{{ replace $data.about.text1 "\n" "<br />" | safeHTML }}
-              {{else}}You can put text in
-              data/home/about.toml/text1{{end}}
-            </div>
-          </div>
-          </div>
-        </div>
-      </section>
-      <section id="landscape" style="margin-top: 4rem; scroll-margin-block-start: 120px">
-        <div class="md:flex justify-center">
-          <div class="text-3xl title-deco tracking-wide">
-            Landscape in numbers
-          </div>
-        </div>
-          
-          <div class="mt-10 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-6 gap-4 justify-center">
-          
-          <div class="overflow-hidden">
-            <div>
-              <div class="font-bold text-xl mx-auto my-auto">
-                <div>
-                  <img src="/img/landscape/numbers/user.png" width="20%" class="flex mx-auto my-auto">
-                  <div class="text-center">
-                    44K+
-                  </div>
-                </div>
-              </div>
-              <p class="text-center">
-                 Codex Users
-              </p>
-            </div>
-          </div>
-          
-          <div class="overflow-hidden">
-            <div>
-              <div class="font-bold text-xl mx-auto my-auto">
-                <div>
-                  <img src="/img/landscape/numbers/countries.png" width="20%" class="flex mx-auto my-auto">
-                  <div class="text-center">
-                    21
-                  </div>
-                </div>
-              </div>
-              <p class="text-center">
-                Countries
-              </p>
-            </div>
-          </div>
-
-          <div></div>
-          <div></div>
-          
-          <div class="overflow-hidden">
-            <div class="numbers-icons">
-              <div class="font-bold text-xl mx-auto my-auto">
-                <div>
-                  <img src="/img/landscape/numbers/apps.png" width="20%" class="flex mx-auto my-auto">
-                  <div class="text-center">
-                    131
-                  </div>
-                </div>
-              </div>
-              <p class="text-center">
-                Active apps
-              </p>
-            </div>
-          </div>
-          
-          <div class="overflow-hidden">
-            <div class="numbers-icons">
-              <div class="font-bold text-xl mx-auto my-auto">
-                <div>
-                  <img src="/img/landscape/numbers/sapVersion.png" width="20%" class="flex mx-auto my-auto">
-                  <div class="text-center"> 
-                    2020
-                  </div>
-                </div>
-              </div>
-              <p class="text-center">
-                S/4HANA Version
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="md:flex justify-center" style="margin-top: 4rem; scroll-margin-block-start: 120px">
-          <div class="text-3xl title-deco tracking-wide">
-            SAP Landscape
-          </div>
-        </div>
-        <br>
-        <p class="text-center">You can find here a small list of the SAP tools we use in our daily work.</p>
-        <br>
-        <input id="tab1" type="radio" name="tabs" checked="">
-        <label for="tab1" style="font-size: 100%;">Front-end</label>
-        
-        <input id="tab2" type="radio" name="tabs">
-        <label for="tab2" style="font-size: 100%;">Back-end</label>
-        <br>
-        <section id="front" class="tab" style="scroll-margin-block-start: 120px">
-          
-          <div class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center">
-         
-         <div>
-            <a href="https://sapui5.hana.ondemand.com/#/topic" target="_blank"><img src="/img/landscape/Sap/front/SAPUI5.png" width="50%" class="flex mx-auto my-auto technos" style="margin-top: -2%"></a>
-         </div>
-            
-         <div>
-            <a href="https://docs.sonarsource.com/sonarqube/latest/" target="_blank"><img src="/img/landscape/Sap/front/sonar.png" width="50%" class="flex mx-auto my-auto technos"></a>
-         </div>
-            
-         <div>
-            <a href="https://docs.gitlab.com/" target="_blank"><img src="/img/landscape/Sap/front/gitlab.png" width="50%" class="flex mx-auto my-auto technos"></a>
-         </div>
-            
-         <div>
-            <a href="https://www.sap.com/products/technology-platform/fiori.html" target="_blank"><img src="/img/landscape/Sap/front/fiori.png" width="45%" class="flex mx-auto my-auto technos" style="margin-top: 11%"></a>
-         </div>
-            
-         <div>
-            <a href="https://www.sap.com/products/technology-platform/business-application-studio.html" target="_blank"><img src="/img/landscape/Sap/front/bas.png" width="38%" class="flex mx-auto my-auto technos" style="margin-top: 15%;"></a>
-         </div>
-            
-         <div>
-            <a href="https://azure.microsoft.com/en-in/resources/cloud-computing-dictionary/what-is-devops" target="_blank"><img src="/img/landscape/Sap/front/devops.png" width="50%" class="flex mx-auto my-auto technos" style="margin-top: 10%"></a>
-         </div>
-            
-         <div>
-            <a href="https://www.sap.com/products/technology-platform.html" target="_blank"><img src="/img/landscape/Sap/front/btp.png" width="50%" class="flex mx-auto my-auto" style="margin-top: 10%"></a>
-         </div>
-            
-         <div>
-          <a href="https://blogs.sap.com/2018/08/08/what-is-sap-c4hana-and-why-should-you-care/" target="_blank"><img src="/img/landscape/Sap/front/C4.webp" width="50%" class="flex mx-auto my-auto technos"></a>
-         </div>
-            
-         <div>
-          <a href="https://www.sap.com/products/technology-platform/cloud-analytics.html" target="_blank"><img src="/img/landscape/Sap/front/analytics.png" width="50%" class="flex mx-auto my-auto technos"></a>
-         </div>
-            
-          
-        </div></section>
-        <section id="back" class="tab" style="scroll-margin-block-start: 120px">
-          
-          <div class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-6 justify-center">
-         
-         <div>
-            <a href="https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-us/abenabap_oview.htm" target="_blank"></a><img src="/img/landscape/Sap/back/abap.png" width="50%" class="flex mx-auto my-auto technos" style="margin-top: 10%"></a>
-         </div>
-            
-         <div>
-            <a href="https://www.odata.org/documentation/" target="_blank"></a><img src="/img/landscape/Sap/back/odata.jpg" width="50%" class="flex mx-auto my-auto technos" style="margin-top: 10%"></a>
-         </div>
-            
-         <div>
-            <a href="https://help.sap.com/docs/forms-service-by-adobe/sap-forms-service-cf/sap-forms-service-by-adobe" target="_blank"></a><img src="/img/landscape/Sap/back/abode.png" width="45%" class="flex mx-auto my-auto technos"></a>
-         </div>
-            
-         <div>
-            <a href="https://help.sap.com/docs/SAP_NETWEAVER_750/a602ff71a47c441bb3000504ec938fea/4f41e8a0dd89535fe10000000a421937.html" target="_blank"></a><img src="/img/landscape/Sap/back/business.png" width="50%" class="flex mx-auto my-auto technos" style="margin-top: 5%"></a>
-         </div>
-            
-         <div>
-            <a href="https://www.sap.com/products/erp/s4hana.html" target="_blank"></a><img src="/img/landscape/Sap/back/s4.png" width="50%" class="flex mx-auto my-auto technos" style="margin-top: 15%"></a>
-         </div>
-            
-         <div>
-            <a href="https://docs.mulesoft.com/general/" target="_blank"></a><img src="/img/landscape/Sap/back/mule.png" width="50%" class="flex mx-auto my-auto technos" style="margin-top: 5%"></a>
-         </div>
-        </div></section>
-
-      <!-- <section id="team" class="team-members" style="scroll-margin-block-start: 120px">
-        <div class="md:flex justify-center">
-          {{ partial "home_title" (dict "title" "Meet us") }}
-        </div>
-        <br />
-        <p class="text-center">Meet some members of our development team</p>
-        <br />
-          <div class="members">
-            <div class="sliders">
-              {{ range $data.team.members }}
-              <div class="slide">
-                <img src="{{ .icon }}" />
-              </div>
-              {{end}}
-            </div>
-          </div>
-      </section> -->
-
-      <section id="team" style="margin-top: 4rem; scroll-margin-block-start: 120px">
-        <div class="md:flex justify-center overflow-hidden">
-          {{ partial "home_title" (dict "title" "Team Activities") }}
-        </div>
-        <br />
-        <p class="text-center">As a large team, we have many diverse activities.</p>
-        <br />
-        {{if $data.team.activities}}
-        <div
-          class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2"
-        >
-          {{ range $data.team.activities }}
-          <div class="w-full rounded overflow-hidden shadow-lg">
-
-              <img
-              src="{{ .image }}"
-              width="80px"
-              style="margin-top: 10px; margin-left: 20px;"
-              />            
-            </a>         
-            <div class="px-6 py-4 desc">
-              <div class="font-bold text-l mb-2">{{ .title }}</div>
-              <p class="text-gray-700 text-base">
-                {{ .text }}
-              </p>
-            </div>
-          </div>
-          {{end}}
-        </div>
-        {{else}}
-            <div class="mt-4 text-xl text-center">Projects does not exist</div>
-        {{end}}
-      </section>
-
-      <section id="team" style="margin-top: 4rem; scroll-margin-block-start: 120px">
-        <div class="md:flex justify-center">
-          {{ partial "home_title" (dict "title" "Team Values") }}
-        </div>
-        <br />
-        <div class="value">
-          <s id="s1" style="display: none;"></s>
-          <s id="s2" style="display: none;"></s>
-        
-          <div class="slider">
-            <div style="background-color: #1f293a;">
-              <div class="mt-8 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                {{ range $data.team.values }}
-                  <div class="w-full rounded overflow-hidden">
-                    <img
-                      class=" mx-auto my-auto"
-                      src="{{ .image }}"
-                      width="80px"
-                    />               
-                    <div class="px-6 py-4">
-                      <p class="text-white text-base">
-                        {{ .text }}
-                      </p>
-                    </div>
-                  </div>
-                {{end}}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- <section id="team" style="margin-top: 4rem; scroll-margin-block-start: 120px">
-        <div class="md:flex justify-center">
-          {{ partial "home_title" (dict "title" "Team Values") }}
-        </div>
-        <br/>
-        <div class="value">
-        
-          <div class="slider overflow-hidden">
-            <div style="background-color: #1f293a;">
-              <div class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-1 lg:grid-cols-6 gap-4" style="width: 200%;">
-                {{ range $data.team.values }}
-                  <div class="w-full rounded overflow-hidden">
-                    <img
-                      class=" mx-auto my-auto"
-                      src="{{ .image }}"
-                      width="80px"
-                    />
-                    <div class="px-6 py-4">
-                      <p class="text-white text-base">
-                        {{ .text }}
-                      </p>
-                    </div>
-                  </div>
-                {{end}}
-              </div>
-            </div>
-            
-          </div>
-          <div class="prevNext">
-            <div><a></a><a href="#s1" class="arrow-right"></a></a><a href="#s2" class="arrow-right"></a></div>
-            <div><a href="#s1" class="arrow-left"></a></div>
-          </div>
-        </div>
-      </section> -->
-    
-      <section id="team" style="scroll-margin-block-start: 120px">
-        <div class="md:flex justify-center">
-          {{ partial "home_title" (dict "title" "Team Certifications") }}
-        </div>
-        <br/>
-        {{if $data.team.certification}}
-        <div
-        class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2"
-      >
-        {{ range $data.team.certification }}
-        <div class="w-full rounded overflow-hidden shadow-lg">
-            <img
-            class=" py-1 px-3"
-            src="{{ .image }}"
-            width="130px"
-            style="margin-top: 10px; margin-left: 5px;"
-            />                 
-            <div class="px-6 py-4 desc">
-              <div class="font-bold text-l mb-2">{{ .title }}</div>
-              <p class="text-gray-700 text-base">
-                {{ .text }}
-              </p>
-            </div>
-          </div>
-          {{end}}
-        </div>
-          {{end}}
-      </section>
-
-      <section id="contact" style="margin-top: 4rem; scroll-margin-block-start: 120px">
-        <div class="md:flex justify-center">
-          <div class="text-3xl title-deco tracking-wide">
-            Contact
-          </div>
-        </div>
-        <div style="display: flex; justify-content: center;">
-        <form action="https://fabform.io/f/1KamHTM" method="post" class="mt-8" style="justify-content: center;">
-          <label for="firstName" style="all:unset;">First Name</label>
-          <input name="firstName" type="text" required style="all: unset; border: 2px solid #ccc; margin-left: 5px;">
-          <br/>
-          <br/>
-          <label for="lastName" style="all:unset;">Last Name</label>
-          <input name="lastName" type="text" required style="all:unset; border: 2px solid #ccc; margin-left: 5px;">
-          <br/>
-          <br/>
-          <label for="email" style="all:unset;">Email</label>
-          <input name="email" type="email" required style="all:unset; border: 2px solid #ccc; margin-left: 5px;">
-          <br/>
-          <br/>
-          <button type="submit" class="send_button">Send</button>
-        </form>
-        </div>
-    </main>
   </div>
+</section>
+<!-- <section id="team" style="margin-top: 4rem; scroll-margin-block-start: 120px"> <div class="md:flex justify-center">{{partial "home_title" (dict "title" "Team Values")}}</div> <br/> <div class="value"> <div class="slider overflow-hidden"> <div style="background-color: #1f293a;"> <div class="mt-8 grid grid-flow-row grid-cols-1 md:grid-cols-1 lg:grid-cols-6 gap-4" style="width: 200%;">{{range $data.team.values}}
+    <div class="w-full rounded overflow-hidden"> <img class=" mx-auto my-auto" src="{{ .image }}" width="80px" /> <div class="px-6 py-4"> <p class="text-white text-base">{{.text}}</p> </div> </div>{{end}}
+    </div> </div> </div> <div class="prevNext"> <div><a></a><a href="#s1" class="arrow-right"></a></a><a href="#s2" class="arrow-right"></a></div> <div><a href="#s1" class="arrow-left"></a></div> </div> </div> </section> -->
+
+
+<section id="team" class="px-6 py-4" style="scroll-margin-block-start: 120px">
+  <div class="md:flex justify-center">
+    <div class="text-3xl title-deco tracking-wide"> {{partial "home_title" (dict "title" "Team Certifications")}} </div>
+  </div> <br />{{if
+  $data.team.certification}}
+  <div class="mt-8 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2">{{range
+    $data.team.certification}}
+    <div class="w-full rounded overflow-hidden shadow-lg"> <img class="py-1 px-3" src="{{ .image }}" width="130px"
+        style="margin-top: 10px; margin-left: 5px;" />
+      <div class="px-6 py-4 desc">
+        <div class="font-bold text-l mb-2">{{.title}}</div>
+        <p class="text-gray-700 text-base">{{.text}}</p>
+      </div>
+    </div>{{end}}
+  </div>{{end}}
+</section>
+
+
+<section id="contact" class="px-6 py-4" style="margin-top: 4rem; scroll-margin-block-start: 120px; margin-bottom: 4rem">
+  <div class="md:flex justify-center">
+    <div class="text-3xl title-deco tracking-wide"> Contact Us </div>
+  </div>
+  <br/>
+  <div style="display:flex; justify-content: center;">
+    <div class="mt-8" style="background-color: #1f293a; padding: 60px; border-radius: 10%;">
+    <form action="https://fabform.io/f/fhibea_" method="post"> <input
+        name="name" type="text" placeholder="Name"
+        style="all: unset; border-bottom: 1px solid white; margin-left: 5px; color: white;"> <br /> <br /> <input name="email"
+        type="email" required placeholder="Email" style="all:unset; color: white; border-bottom: 1px solid white; margin-left: 5px;"> <br /> <br />
+      <textarea name="message" type="text" required placeholder="Message" style="all:unset; border-bottom: 1px solid white; color: white; margin-left: 5px; height: 120px; width: 180px;"></textarea>
+      <br/><br/><br/> <button type="submit" class="hover-btn">Send</button>
+    </form>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
 </div>
