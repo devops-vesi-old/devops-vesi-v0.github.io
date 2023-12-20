@@ -1,7 +1,7 @@
 <div class="overflow-hidden" onclick="show">
   <div id="mainBG" style="background-color: #1f293a;">
     <div class="centerAll main-image">
-      <div> <img src="/img/logodev.png" width="100%" /> </div>
+      <div> <img src="/img/logodev.svg" width="600px" /> </div>
       <div class="text text-xl text-center">
         {{if $.Site.Params.maintext}}
         {{$.Site.Params.maintext}}
@@ -17,7 +17,7 @@
     <section id="about" style="margin-top: 3rem; scroll-margin-block-start: 120px">
       <div class="md:flex justify-center overflow-hidden">{{partial "home_title" (dict "title" "About Us")}}</div> <br>
       <div
-        class="mt-4 md:mt-0 md:ml-4 justify-center text-center grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 lg:grid-flow-row gap-5">
+        class="mt-4 justify-center text-center grid grid-flow-row md:grid-cols-1 lg:grid-cols-2 lg:grid-flow-row gap-5">
         <div>
           <div class="text-2xl font-bold">
             {{if $data.about.title}}
@@ -34,34 +34,70 @@
         </div>
         <div class="overflow-hidden">
           <div class="sliderContainer slider-position">
-            <div class="slider">
+            <div class="slider" style="overflow: visible;">
               <div class="slide-track">
-                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                <div class="slide"> <img class="avatar" src="/img/Image1.png"/>
                 </div>
-                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                <div class="slide"> <img class="avatar" src="/img/Image2.png"/>
                 </div>
-                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                <div class="slide"> <img class="avatar" src="/img/Image3.png"/>
                 </div>
-                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                <div class="slide"> <img class="avatar" src="/img/Image4.png"/>
                 </div>
-                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                <div class="slide"> <img class="avatar" src="/img/Image5.png"/>
                 </div>
-                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                <div class="slide"> <img class="avatar" src="/img/Image6.png"/>
                 </div>
-                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                <div class="slide"> <img class="avatar" src="/img/Image7.png"/>
                 </div>
-                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                <div class="slide"> <img class="avatar" src="/img/Image8.png"/>
                 </div>
-                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                <div class="slide"> <img class="avatar" src="/img/Image9.png"/>
                 </div>
-                <div class="slide"> <img class="avatar" src="/img/team/members/avatar-lebron.png" heght="160" width="120" />
+                <div class="slide"> <img class="avatar" src="/img/Image10.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image11.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image12.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image13.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image14.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image1.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image2.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image3.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image4.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image5.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image6.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image7.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image8.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image9.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image10.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image11.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image12.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image13.png"/>
+                </div>
+                <div class="slide"> <img class="avatar" src="/img/Image14.png"/>
                 </div>
               </div>
             </div>
           </div>
         </div>
         </div>
-        <div class="mt-4">
+        <div class="lg:mt-10 mt-6">
           <div class="text-2xl font-bold text-center">{{if $data.about.title1}}
             {{$data.about.title1}}
             {{else}}You can put text in data/home/about.toml/title1{{end}}
@@ -85,11 +121,13 @@
       <div class="md:flex justify-center">
         <div class="text-3xl title-deco tracking-wide"> Our Work in Numbers </div>
       </div>
-      <div class="mt-10 grid grid-flow-row grid-cols-3 md:grid-cols-3 lg:grid-cols-7 justify-center">
+      <div class="mt-10 grid grid-flow-row grid-cols-2 md:grid-cols-2 lg:grid-cols-8 justify-center wrapper overflow-hidden">
+        <div class="responsive_div"></div>
+        <div class="responsive_div"></div>
         <div class="overflow-hidden">
           <div>
             <div class="font-bold text-xl mx-auto my-auto">
-              <div> <img src="/img/landscape/numbers/user.png" width="40%" class="flex mx-auto my-auto">
+              <div> <img src="/img/landscape/numbers/user.png" width="50%" class="flex mx-auto my-auto numbers-width-responsive">
                 <div class="text-center"> 44K+ </div>
               </div>
             </div>
@@ -99,28 +137,17 @@
         <div class="overflow-hidden">
           <div>
             <div class="font-bold text-xl mx-auto my-auto">
-              <div> <img src="/img/landscape/numbers/countries.png" width="40%" class="flex mx-auto my-auto">
+              <div> <img src="/img/landscape/numbers/countries.png" width="50%" class="flex mx-auto my-auto numbers-width-responsive">
                 <div class="text-center"> 21 </div>
               </div>
             </div>
             <p class="text-center"> Countries </p>
           </div>
         </div>
-        <div class="overflow-hidden">
-          <div>
-            <div class="font-bold text-xl mx-auto my-auto">
-              <div> <img src="/img/landscape/numbers/countries.png" width="40%" class="flex mx-auto my-auto">
-                <div class="text-center"> 21 </div>
-              </div>
-            </div>
-            <p class="text-center"> Countries </p>
-          </div>
-        </div>
-        <div class="responsive_div"></div>
         <div class="overflow-hidden">
           <div class="numbers-icons">
             <div class="font-bold text-xl mx-auto my-auto">
-              <div> <img src="/img/landscape/numbers/apps.png" width="40%" class="flex mx-auto my-auto">
+              <div> <img src="/img/landscape/numbers/apps.png" width="50%" class="flex mx-auto my-auto numbers-width-responsive">
                 <div class="text-center"> 131 </div>
               </div>
             </div>
@@ -130,23 +157,15 @@
         <div class="overflow-hidden">
           <div class="numbers-icons">
             <div class="font-bold text-xl mx-auto my-auto">
-              <div> <img src="/img/landscape/numbers/sapVersion.png" width="40%" class="flex mx-auto my-auto">
-                <div class="text-center"> X K+ </div>
+              <div> <img src="/img/landscape/numbers/lines-of-code.png" width="50%" class="flex mx-auto my-auto numbers-width-responsive">
+                <div class="text-center"> 7M+ </div>
               </div>
             </div>
             <p class="text-center"> Lines of Code </p>
           </div>
         </div>
-        <div class="overflow-hidden">
-          <div  class="numbers-icons">
-            <div class="font-bold text-xl mx-auto my-auto">
-              <div> <img src="/img/landscape/numbers/countries.png" width="40%" class="flex mx-auto my-auto">
-                <div class="text-center"> 21 </div>
-              </div>
-            </div>
-            <p class="text-center"> Countries </p>
-          </div>
-        </div>
+        <div class="responsive_div"></div>
+        <div class="responsive_div"></div>
       </div>
     </section>
 
@@ -155,69 +174,70 @@
 
 
 
-    <section class="overflow-hidden px-6 py-4" style="margin-top: 6rem; scroll-margin-block-start: 120px"></section>
+    <section class="overflow-hidden px-6 py-4" style="margin-top: 6rem; scroll-margin-block-start: 120px">
     <div class="md:flex justify-center">
-      <div class="text-3xl title-deco tracking-wide"> SAP Landscape </div>
+      <div class="text-3xl title-deco tracking-wid "> SAP Landscape </div>
     </div>
-    <div class="container23 mt-12 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 justify-center">
-      <div class="justify-center premise-list" style="display: grid;">
+    <div class="container23 mt-10 grid grid-flow-row md:grid-cols-2 lg:grid-cols-2" style="column-gap: 8rem;">
+      <div class="justify-center mt-4" style="display: grid; justify-content: right;">
         <ul>
           <div class="text-2xl font-bold text-center">
             On-Premise & Back
           </div>
-          <a href="https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-us/abenabap_oview.htm" target="_blank">
+          <a href="https://help.sap.com/doc/abapdocu_752_index_htm/7.52/en-us/abenabap_oview.htm" style="cursor: auto;" target="_blank">
             <li id="TEST">ABAP</li>
           </a>
-          <a href="https://www.sap.com/products/erp/s4hana.html" target="_blank">
+          <a href="https://www.sap.com/products/erp/s4hana.html" style="cursor: auto;" target="_blank">
             <li id="TEST">SAP S/4HANA 2020</li>
           </a>
-          <a href="https://help.sap.com/doc/6bbeffd4801447c0a67b30968778a24f/Cloud/en-US/abap_cds_dev_user_guide_EN.pdf" target="_blank">
+          <a href="https://help.sap.com/doc/6bbeffd4801447c0a67b30968778a24f/Cloud/en-US/abap_cds_dev_user_guide_EN.pdf" style="cursor: auto;" target="_blank">
             <li id="TEST">ABAP CDS</li>
           </a>
-          <a href="https://www.odata.org/documentation/" target="_blank">
+          <a href="https://www.odata.org/documentation/" style="cursor: auto;" target="_blank">
             <li id="TEST">ODATA</li>
           </a>
-          <a href="https://help.sap.com/docs/forms-service-by-adobe/sap-forms-service-cf/sap-forms-service-by-adobe" target="_blank">
+          <a href="https://help.sap.com/docs/forms-service-by-adobe/sap-forms-service-cf/sap-forms-service-by-adobe" style="cursor: auto;" target="_blank">
             <li id="TEST">Adobe Forms</li>
           </a>
-          <a href="https://docs.mulesoft.com/general/" target="_blank">
+          <a href="https://docs.mulesoft.com/general/" style="cursor: auto;" target="_blank">
             <li id="TEST">Mulesoft</li>
           </a>
-          <a href="https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/c238d694b825421f940829321ffa326a/12bdb73f7f6a4bfe95540b31af29ac10.html" target="_blank">
+          <a href="https://help.sap.com/docs/SAP_NETWEAVER_AS_ABAP_752/c238d694b825421f940829321ffa326a/12bdb73f7f6a4bfe95540b31af29ac10.html" style="cursor: auto;" target="_blank">
             <li id="TEST">ABAP Eclipse</li>
           </a>
         </ul>
       </div>
-      <div class="justify-center list-responsive cloud-list" style="display: grid;">
+      <div class="justify-center list-responsive" style="display: grid; justify-content: left;">
         <ul>
           <div class="text-2xl font-bold text-center">
             Cloud & New Tech
           </div>
-          <a href="https://sapui5.hana.ondemand.com/#/topic" target="_blank">
+          <a href="https://sapui5.hana.ondemand.com/#/topic" style="cursor: auto;" target="_blank">
             <li id="TEST">SAPUI5</li>
           </a>
-          <a href="https://www.sap.com/products/technology-platform/fiori.html" target="_blank">
+          <a href="https://experience.sap.com/fiori-design/" style="cursor: auto;" target="_blank">
             <li id="TEST">Fiori</li>
           </a>
-          <a href="https://sapui5.hana.ondemand.com/#/topic" target="_blank">
+          <a href="https://www.sap.com/products/technology-platform.html" style="cursor: auto;" target="_blank">
             <li id="TEST">SAP BTP</li>
           </a>
-          <a href="https://www.sap.com/products/technology-platform/business-application-studio.html" target="_blank">
+          <a href="https://www.sap.com/products/technology-platform/business-application-studio.html" style="cursor: auto;" target="_blank">
             <li id="TEST">SAP BAS</li>
           </a>
-          <a href="https://docs.gitlab.com/" target="_blank">
+          <a href="https://docs.gitlab.com/" style="cursor: auto;" target="_blank">
             <li id="TEST">GitLab</li>
           </a>
-          <a href="https://docs.sonarsource.com/sonarqube/latest/" target="_blank">
+          <a href="https://docs.sonarsource.com/sonarqube/latest/" style="cursor: auto;" target="_blank">
             <li id="TEST">SonarQube</li>
           </a>
-          <a href="https://azure.microsoft.com/en-in/resources/cloud-computing-dictionary/what-is-devops" target="_blank">
+          <a href="https://www.atlassian.com/devops" style="cursor: auto;" target="_blank">
             <li id="TEST">DevOps</li>
           </a>
         </ul>
       </div>
     </div>
-</div>
+  </div>
+</section>
 <!-- <p class="text-center">You can find here a small list of the SAP tools we use in our daily work.</p> <br> <input
       id="tab1" type="radio" name="tabs" checked=""> <label for="tab1" style="font-size: 100%;">Cloud & New Tech</label>
     <input id="tab2" type="radio" name="tabs"> <label for="tab2" style="font-size: 100%;">On-premise & Back</label> <br>
@@ -274,7 +294,6 @@
             style="margin-top: 5%"></a> </div>
       </div>
     </section> -->
-</section>
 
 
 

@@ -1,4 +1,4 @@
-title = "DevTeam From VESI"
+title = "DevOps Team From VESI"
 
 text = """
 Vinci Energies Systèmes d'Information (VESI) is a VINCI Energies company. 
@@ -11,7 +11,7 @@ title1 = "The core mission behind all our work"
 
 text1 = """
 There are several departments at VESI including Codex Solutions. 
-The DevTeam is part of this department. 
+The DevOps Team is part of this department. 
 The main mission of our team is to ensure the deployment and maintenance of the ERP named Codex, 
 in the different acquisitions of Vinci Energies.
 """

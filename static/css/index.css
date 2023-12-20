@@ -84,10 +84,6 @@ label:before {
   font-size: 18px;
 }
 
-.numbers-icons {
-  margin-top: 20px;
-}
-
 .technos {
   transform: scale(1.25);
 }
@@ -96,15 +92,18 @@ label:before {
 label {
   padding: 15px;
 }
+}
 
-.numbers-icons {
-  margin-top: 20px;
-}
-}
 @media screen and (max-width: 500px) {
 .technos {
   transform: scale(1.5);
 }
+}
+
+@media screen and (max-width: 1023px) {
+  .numbers-icons {
+    margin-top: 40px;
+  }
 }
 
 /* section team members */
@@ -294,8 +293,9 @@ border-bottom: 25px solid transparent;
 .hover-btn{
   all: unset;
   cursor: pointer;
-  margin-left: 60px; border:
-  2px solid white; color: white;
+  margin-left: 60px;
+  border:2px solid white;
+  color: white;
   padding: 5px; border-radius: 10%;
   width: 60px;
   text-align: center;
@@ -327,60 +327,25 @@ border-bottom: 25px solid transparent;
   margin: 1.5em;
   cursor: pointer;
   padding: 1em;
-  background: #1f293a;
+  background-color: #1f293a;
   position: relative;
   color: white;
   border-radius: 5px;
+  justify-content: center;
+  border: 3px solid #1f293a;
 }
 
-#TEST::before,
-#TEST::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  border-radius: 5px;
-  width: 105%;
-  transition: all 0.4s;
-}
-
-#TEST::before {
-  left: 0;
-  height: 130%;
-  background: linear-gradient(to right, #1f293a, #0575E6);
-}
-
-#TEST::after {
-  left: -10%;
-  height: 120%;
-  background: #ffffff56;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px white;
-}
-
-#TEST:hover::before {
-  transform: translateX(-2.5%);
-}
-
-#TEST:hover::after {
-  transform: translateX(15%);
+#TEST:hover {
+  background-color: white;
+  color: #1f293a;
+  border: 3px solid #1f293a;
+  font-weight: bolder;
 }
 
 .sliderContainer {
   overflow: hidden;
-  width: 200vw;
+  width: inherit;
   height: 200px;
-}
-
-.logoSlider>img {
-  width: 100px;
-  height: 100px;
-  justify-content: center;
-}
-
-.logoSlider {
-  display: flex;
-  animation: linear 1.5s infinite running;
-  animation-name: slideshow;
 }
 
 .send_button {
@@ -394,64 +359,44 @@ border-bottom: 25px solid transparent;
   font-size: 16px;
 }
 
-@keyframes slideshow {
-  from {
-    transform: translate(0px);
-  }
-
-  to {
-    transform: translate(-100px);
-  }
-}
-
-@-webkit-keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(calc(-250px * 7));
-  }
-}
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
 
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-110.84px * 14));
   }
 }
 
 .slider {
   background: white;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0) ;
-  height: 100px;
+  height: 150px;
   overflow: hidden;
   position: relative;
-  width: 960px;
+  width: inherit;
+  display: flex;
 }
 
 .slider-position {
-  margin-top: 5rem;
-  margin-left: 5rem;
+  margin-top: 3rem;
+  margin-left: 3rem;
 }
 
 @media screen and (max-width: 1023px) {
   .slider-position{
-    margin-top: 6rem;
+    margin-top: 5rem;
     margin-left: 0;
   }
 }
 
 .slider::before,
 .slider::after {
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, rgb(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
-  height: 100px;
+  height: 150px;
   position: absolute;
-  width: 200px;
+  width: 50px;
   z-index: 2;
 }
 
@@ -467,19 +412,20 @@ border-bottom: 25px solid transparent;
 }
 
 .slider .slide-track {
-  -webkit-animation: scroll 40s linear infinite;
-  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 20s linear infinite;
+  animation: scroll 20s linear infinite;
   display: flex;
-  width: calc(250px * 14);
 }
 
 .slider .slide {
-  height: 100px;
-  width: 250px;
+  height: 150px;
+  width: 106px;
+  margin-left: 5px;
 }
 
 .avatar {
-  border-radius: 40%;
+  border-radius: 10%;
+  height: 150px;
 }
 
 @media screen and (max-width: 1023px) {
@@ -488,17 +434,18 @@ border-bottom: 25px solid transparent;
   }
 }
 
+.list-responsive {
+  margin-top: 1rem;
+}
+
 @media screen and (max-width: 767.99px) {
   .list-responsive{
-    margin-top: 4rem;
+    margin-top: 3rem;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .cloud-list{
-    margin-right: 100px;
-  }
-  .premise-list{
-    margin-left: 100px;
+@media screen and (max-width: 1023px) {
+  .numbers-width-responsive{
+    width: 30%;
   }
 }
